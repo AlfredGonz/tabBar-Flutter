@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'tabHome.dart';
+import 'tabEvent.dart';
+import 'tabInbox.dart';
+import 'tabSettings.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +23,17 @@ class MyApp extends StatelessWidget {
                new Tab(icon: new Icon(Icons.event), text: "Event"),
                new Tab(icon: new Icon(Icons.settings), text: "Settings") 
             ]),
-        )
+        ),
+
+        body:  new TabBarView(
+          children: [
+            new TabHome(),
+            new TabInbox(),
+            new TabEvent(),
+            new TabSettings()
+          ],
+        ),
+
       ),
     );
     
